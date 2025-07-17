@@ -16,6 +16,13 @@
 .navbutton {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
+    letter-spacing: 5px;
+    font-size: small;
+}
+
+.navbutton:focus {
+    color: antiquewhite;
+    font-style: italic;
 }
