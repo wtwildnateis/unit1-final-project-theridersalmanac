@@ -1,6 +1,7 @@
-import React from "react";
 import './Navbar.css';
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.png";
+
 const Navbar = () => {
     return (
         <>
@@ -16,6 +17,12 @@ const Navbar = () => {
                             Events
 
                         </NavLink>
+
+                    <div className="navlogocontainer">
+                        <NavLink to="/">
+                            <img src={logo}></img>
+                        </NavLink>
+                    </div>
                         <NavLink to="/resources" className="navbutton">
 
                             Resources

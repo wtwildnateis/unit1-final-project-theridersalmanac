@@ -1,8 +1,9 @@
-import React from "react";
 
 const Contact = () => {
     return (
+        <div className="universalpagecontainer">
         "Contact Us Page test"
+        </div>
     );
 };
 
