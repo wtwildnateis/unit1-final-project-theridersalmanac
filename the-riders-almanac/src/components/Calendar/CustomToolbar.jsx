@@ -5,7 +5,7 @@ const CustomToolbar = ({ label, onNavigate, onTypeFilterChange, currentType }) =
     };
 
     return (
-        <div className="rbc-toolbar custom-toolbar">
+        <div className="rbc-toolbar">
             <div className="nav-left">
                 <button onClick={() => handleNavigate('TODAY')}>Today</button>
                 <button onClick={() => handleNavigate('PREV')}>Back</button>
@@ -16,7 +16,13 @@ const CustomToolbar = ({ label, onNavigate, onTypeFilterChange, currentType }) =
             </div>
 
             <div className="nav-right">
-                <select value={currentType} onChange={(e) => onTypeFilterChange(e.target.value)}>
+                <label htmlFor="eventTypeSelect" className="sort-label">Sort Events:</label>
+                <select
+                    id="eventTypeSelect"
+                    value={currentType}
+                    onChange={(e) => onTypeFilterChange(e.target.value)}
+                    className="sort-select"
+                >
                     <option value="All">All Events</option>
                     <option value="Bike Race">Bike Races</option>
                     <option value="BMX Jam">BMX Jams</option>

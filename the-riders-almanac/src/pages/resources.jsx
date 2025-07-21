@@ -1,8 +1,11 @@
+import MapMarkers from "../components/Maps/MapMarkers";
 
 const Resources = () => {
     return (
         <div className="universalpagecontainer">
-        "Testing page text"
+            <div className="mapcontainer">
+                <MapMarkers />
+            </div>
         </div>
     );
 };
