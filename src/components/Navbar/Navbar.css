@@ -7,6 +7,7 @@
   width: 100%;
   padding: 0 2rem;
   background-color: black;
+  z-index: 999;
 }
 
 .navbar {
@@ -14,6 +15,7 @@
   width: 100%;
   height: 100px;
   background-color: black;
+  z-index: 1000;
 
 
 }
@@ -24,8 +26,9 @@
 
 .navlogocontainer {
   position: absolute;
-  left: 44%;
+  left: 50%;
   top: -10px;
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
@@ -131,10 +134,10 @@ img {
 }
 
 .hamBurger {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1001;
+  z-index: 1000;
   display: none;
 }
 
@@ -147,7 +150,7 @@ img {
   .hamBurger {
     display: block;
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
   }
 }
 
@@ -175,7 +178,7 @@ img {
   background-color: black;
   padding: 120px 1.5rem 2rem;
   gap: 1.5rem;
-  z-index: 9995;
+  z-index: 9999;
   transition: left .2s ease-in-out;
 }
 

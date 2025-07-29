@@ -64,7 +64,7 @@ const ContactForm = () => {
     return (
 
         <>
-            <div className="modalstyle" style= {{width: '60%'}}>
+            <div className="modalstyle" style= {{width: '60%', overflow: 'hidden'}}>
                 <h2 style= {{textAlign: 'center', marginBottom: '-1px'}}> Contact Us</h2>
 
                 <hr style={{width: '60%', margin: '5px auto'}}/>

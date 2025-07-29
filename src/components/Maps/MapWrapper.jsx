@@ -34,19 +34,21 @@ const MapWrapper = () => {
 
     return (
         <>
+            <div className="mapbuttonscontainer">
             <div className="filter-buttons">
                 {categories.map((type) => (
-                    <Button key={type} 
-                    onClick={() => setSelectedType(type)}
+                    <Button key={type}
+                        onClick={() => setSelectedType(type)}
                         className={type === selectedType ? "selected-filter" : ""}
-                        >
+                    >
                         {type}
                     </Button>
                 ))}
             </div>
-            <MapComponent 
-            selectedType={selectedType} 
-            filterConfig={filterConfig}
+        </div >
+            <MapComponent
+                selectedType={selectedType}
+                filterConfig={filterConfig}
             />
         </>
     );

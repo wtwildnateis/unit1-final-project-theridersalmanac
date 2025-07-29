@@ -26,34 +26,33 @@ const MainRoutes = () => {
 
     return (
         <>
-            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
-                {showNavbar && (
-                    < header className="navbarfade">
-                        <Navbar />
-                    </header>
-                )}
-                <main style={{ flex: 1 }}>
-                    <section className="universalpagecontainer pagefadein" key={location.pathname}>
-                        <Routes>
-                            <Route
-                                path="/home"
-                                element={
-                                    <div className={`fade-wrapper ${fromTitle ? "fade-in" : ""}`}>
-                                        <Home />
-                                    </div>
-                                }
-                            />
+            {showNavbar && (
+                < header className="navbarfade" style={{zIndex: '10000'}}>
+                    <Navbar />
+                </header>
+            )}
+            <main>
+                <section className="universalpagecontainer pagefadein" style= {{zIndex: 0}} key={location.pathname}>
+                    <Routes>
+                        <Route
+                            path="/home"
+                            element={
+                                <div className={`fade-wrapper ${fromTitle ? "fade-in" : ""}`}>
+                                    <Home />
+                                </div>
+                            }
+                        />
 
-                            <Route path="/events" element={<Events />} />
-                            <Route path="/resources" element={<Resources />} />
-                            <Route path="/contact-us" element={<Contact />} />
-                        </Routes>
-                    </section>
-                </main>
-                <Footer />
+                        <Route path="/events" element={<Events />} />
+                        <Route path="/resources" element={<Resources />} />
+                        <Route path="/contact-us" element={<Contact />} />
+                    </Routes>
+                </section>
+            </main>
+            <Footer />
 
-            </div>
+
 
         </>
     );

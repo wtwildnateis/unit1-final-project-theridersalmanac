@@ -177,6 +177,7 @@ const MapComponent = ({ selectedType, filterConfig }) => {
     if (!isLoaded) return <div className="map-loading">Loading map...</div>
 
     return (
+        <div className="themapcontainer">
         <GoogleMap
             mapContainerStyle={mapContainerStyle}
             zoom={11}
@@ -259,6 +260,7 @@ const MapComponent = ({ selectedType, filterConfig }) => {
                 </InfoWindow>
             )}
         </GoogleMap>
+        </div>
     );
 };
 

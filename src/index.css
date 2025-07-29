@@ -5,29 +5,30 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
     left: 0;
-    display: block;
-    
+
 }
 
 #root {
     display: flex;
     flex-direction: column;
-    min-height:100vh;
+    min-height: 100vh;
 }
 
 
 .universalpagecontainer {
     display: flex;
-    flex-shrink: 1;
     flex: 1;
     flex-direction: column;
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: whitesmoke;
     justify-content: center;
     align-items: stretch;
-    overflow-y:auto;
+    overflow-y: auto;
     padding-bottom: 20px;
+    overflow-x: auto;
+
 
 }
 
@@ -40,20 +41,21 @@ html {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 55;
     min-height: 90vh;
     font-size: 20px;
     padding-left: 250px;
     padding-right: 250px;
     padding-top: 100px;
     padding-bottom: 90px;
+    min-width: 768px;
+    width: 100%;
 
 }
 
 .textstrong {
-    font-weight:700;
+    font-weight: 700;
     text-transform: uppercase;
-    font-style:oblique;
+    font-style: oblique;
 }
 
 .homepagecontainer hr {
@@ -66,10 +68,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    min-height: 100vh;
     background-color: antiquewhite;
     cursor: pointer;
     padding-bottom: 30px;
@@ -78,8 +77,8 @@ html {
 
 .titlebackgroundvideo {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -90,8 +89,11 @@ html {
 .title-page img {
     width: 500px;
     height: auto;
-    position: relative;
+    position: absolute;
     z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     filter: drop-shadow(6px 6px 7px rgba(0, 0, 0, .6));
 
 }
@@ -135,31 +137,34 @@ html {
 
 
 
-.rbc-month-view .rbc-date-cell {
+.rbc-month-view,
+.rbc-date-cell {
     height: 100%;
     width: 100%;
     display: block;
 }
 
-.rbc-toolbar {
+.toolbarcontainer {
+    overflow-x: auto;
+
+
+}
+
+.rbc-toolbar,
+.custom-toolbar {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100px;
     background-color: rgb(240, 240, 240);
-    ;
-
-}
-
-.custom-toolbar {
-    display: flex;
     padding-left: 100px;
     padding-right: 100px;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
     column-gap: 10%;
+    min-width: 768px;
+    width: 100%;
+
 }
 
 .nav {
@@ -210,6 +215,7 @@ html {
 
 .nav-center {
     width: 100px;
+    display: flex;
     justify-content: center;
     flex-grow: 1;
     text-align: center;
@@ -229,11 +235,20 @@ html {
     padding-right: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow-x: auto;
+}
+
+.mapbuttonscontainer,
+.themapcontainer {
+    min-width: 768px;
+    width: 100%;
 }
 
 
 .contact-form {
     display: flex;
+    height: 100vh;
+    margin-top: 20px;
     padding-top: 5px;
     flex-direction: column;
     justify-content: flex-start;
@@ -243,8 +258,10 @@ html {
 
 
 .footercontainer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: black;
     color: whitesmoke;
     font-size: 7px;
@@ -258,8 +275,14 @@ html {
     width: 100%;
     padding: 50px 100px;
     box-sizing: border-box;
+    overflow-x: auto;
 
 
+}
+
+.rbc-calendar {
+    min-width: 768px;
+    width: 100%;
 }
 
 .universalPageH2 {
@@ -286,4 +309,32 @@ html {
     justify-content: center;
     align-items: center;
     background-color: black !important;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .rbc-toolbar,
+    .custom-toolbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .homepagecontainer {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    @media (max-width: 767px) {
+        .title-page img {
+            width: 70%;
+            height: auto;
+        }
+
+        .homepagecontainer {
+            width: 760px;
+        }
+    }
 }
