@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './EventModal.css';
-import Button from '../Button/button';
+import Button from '../Button/Button';
 
 const ViewEventModal = ({ event, onClose, onDelete, onEditRequest, position }) => {
     const modalRef = useRef();
