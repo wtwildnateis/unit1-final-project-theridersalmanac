@@ -1,4 +1,4 @@
-import Button from "../Button/button";
+import Button from "../Button/Button";
 
 const CustomToolbar = ({ label, onNavigate, onTypeFilterChange, currentType }) => {
     const handleNavigate = (action) => {

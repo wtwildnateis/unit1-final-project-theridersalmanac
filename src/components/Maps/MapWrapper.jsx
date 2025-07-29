@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MapComponent from "./Map";
-import Button from "../Button/button";
+import Button from "../Button/Button";
 
 const filterConfig = {
     "Bike Shops": {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import Button from "../Button/button";
+import Button from "../Button/Button";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
