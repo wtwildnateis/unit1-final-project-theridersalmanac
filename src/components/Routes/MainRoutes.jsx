@@ -4,7 +4,7 @@ import Home from '../../pages/home';
 import Events from '../../pages/events';
 import Resources from '../../pages/resources';
 import Contact from '../../pages/contact';
-import Footer from "../Footer/footer";
+import Footer from "../Footer/Footer";
 import { useEffect } from 'react';
 
 const MainRoutes = () => {
