@@ -28,6 +28,7 @@ html {
     overflow-y: auto;
     padding-bottom: 20px;
     overflow-x: auto;
+    padding-top: 50px;
 
 
 }
@@ -49,6 +50,8 @@ html {
     padding-bottom: 90px;
     min-width: 768px;
     width: 100%;
+    position: relative;
+    margin-top: 450px;
 
 }
 
@@ -144,28 +147,18 @@ html {
     display: block;
 }
 
-.toolbarcontainer {
-    overflow-x: auto;
-
-
-}
-
 .rbc-toolbar,
 .custom-toolbar {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 100px;
     background-color: rgb(240, 240, 240);
-    padding-left: 100px;
-    padding-right: 100px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 10%;
-    min-width: 768px;
-    width: 100%;
 
 }
+
 
 .nav {
     width: 110px;
@@ -174,17 +167,19 @@ html {
 
 .nav-left {
     display: flex;
-    width: 100px;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
     padding-left: 20px;
 }
 
 .nav-right {
     display: flex;
-    width: 100px;
+    align-items: center;
     justify-content: flex-end;
+    font-weight: bold;
+    font-size: 1.2rem;
     padding-right: 20px;
-    gap: 8px;
 }
 
 .sort-label {
@@ -228,6 +223,8 @@ html {
 
 .calendarcontainer {
     position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .mapcontainer {
@@ -248,7 +245,6 @@ html {
 .contact-form {
     display: flex;
     height: 100vh;
-    margin-top: 20px;
     padding-top: 5px;
     flex-direction: column;
     justify-content: flex-start;
@@ -273,7 +269,6 @@ html {
 
 .interactiveFtContainer {
     width: 100%;
-    padding: 50px 100px;
     box-sizing: border-box;
     overflow-x: auto;
 
@@ -281,7 +276,6 @@ html {
 }
 
 .rbc-calendar {
-    min-width: 768px;
     width: 100%;
 }
 
@@ -315,11 +309,50 @@ html {
 
 @media (max-width: 1024px) {
 
+.universalpagecontainer {
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+    .calendarcontainer {
+        width: 100vw;
+        height: auto;
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+
     .rbc-toolbar,
     .custom-toolbar {
-        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        height: 120px;
+
+    }
+
+    .nav-left,
+    .nav-right {
         justify-content: flex-start;
+        padding-left: 20px;
+
+    }
+
+    .nav-left {
+        size: 20px;
+        margin-top: 5px;
+    }
+
+    .nav-center {
+        margin-top: 20px;
+    }
+
+    .rbc-calendar {
+        width: 100vw;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-right {
+        margin-top: 5px;
     }
 
     .homepagecontainer {

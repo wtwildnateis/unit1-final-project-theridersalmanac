@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
             <div className={`${fadeClass}`} style={{display: "flex"}}>
-                <div className="homepagecontainer" style={{marginTop: '450px'}}>
+                <div className="homepagecontainer">
 
                     <div style={{ fontWeight: "bold", float: "left", fontSize: "2.5rem", lineHeight: "1.5", marginInlineEnd: "2px", marginBottom: "25px", textAlign: "center"}}> Welcome to The Rider’s Almanac!</div> <hr /> <div style={{ lineHeight: "1.5", marginLeft: "-10px", marginTop: "15px" }}>We’re <span className="textstrong">stoked</span> to have you here!
                         Whether you're rolling through a new city or cruising familiar streets, The Rider’s Almanac is your <span className="textstrong">go-to guide</span> for all things cycling. Our mission is simple: to empower riders with the tools, connections, and <span className="textstrong">inspiration</span> they need to make every ride smooth, exciting, and unforgettable.
