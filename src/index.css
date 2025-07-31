@@ -27,7 +27,6 @@ html {
     align-items: stretch;
     overflow-y: auto;
     padding-bottom: 20px;
-    overflow-x: auto;
     padding-top: 50px;
 
 
@@ -270,7 +269,6 @@ html {
 .interactiveFtContainer {
     width: 100%;
     box-sizing: border-box;
-    overflow-x: auto;
 
 
 }
@@ -305,14 +303,20 @@ html {
     background-color: black !important;
 }
 
+.newmapscontainer {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
 
+}
 
 @media (max-width: 1024px) {
 
-.universalpagecontainer {
-    justify-content: flex-start;
-    padding-top: 20px;
-}
+    .universalpagecontainer {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
     .calendarcontainer {
         width: 100vw;
         height: auto;
@@ -328,20 +332,19 @@ html {
 
     }
 
+
     .nav-left,
     .nav-right {
         justify-content: flex-start;
-        padding-left: 20px;
 
     }
 
     .nav-left {
-        size: 20px;
         margin-top: 5px;
     }
 
     .nav-center {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
     .rbc-calendar {
@@ -369,6 +372,15 @@ html {
 
         .homepagecontainer {
             width: 760px;
+        }
+
+        .nav-left {
+            justify-content: center;
+        }
+
+        .nav-right {
+            justify-content: center;
+            margin-right: -20px;
         }
     }
 }

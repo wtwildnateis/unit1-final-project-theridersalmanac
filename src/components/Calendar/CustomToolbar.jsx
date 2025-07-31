@@ -9,9 +9,9 @@ const CustomToolbar = ({ label, onNavigate, onTypeFilterChange, currentType }) =
         <div className="toolbarcontainer">
             <div className="rbc-toolbar">
                 <div className="nav-left">
-                    <Button onClick={() => handleNavigate('TODAY')}>Today</Button>
-                    <Button onClick={() => handleNavigate('PREV')}>Back</Button>
-                    <Button onClick={() => handleNavigate('NEXT')}>Next</Button>
+                    <Button className="calendarbutton" onClick={() => handleNavigate('TODAY')}>Today</Button>
+                    <Button className="calendarbutton" onClick={() => handleNavigate('PREV')}>Back</Button>
+                    <Button className="calendarbutton" onClick={() => handleNavigate('NEXT')}>Next</Button>
                 </div>
                 <div className="nav-center">
                     <span>{label}</span>
